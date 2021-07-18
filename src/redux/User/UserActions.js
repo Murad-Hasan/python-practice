@@ -24,8 +24,8 @@ export const fetchUserFailure = (error) => {
 
 export const fetchUser = () => {
   return (dispatch) => {
-    dispatch(fetchUserRequest());
-    return axios
+    // dispatch(fetchUserRequest());
+    axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         dispatch(fetchUserSuccess(response.data));
